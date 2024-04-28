@@ -8,13 +8,13 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class myfoodAdapter(
+class MyfoodAdapter(
     private val context: Activity,
     private val title: Array<String>,
     private val desc: Array<String>,
     private val imageId: Array<Int>
 ) : ArrayAdapter<String>(context,R.layout.listfood, title) {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val conInFlater = context.layoutInflater
         val rowView = conInFlater.inflate(R.layout.listfood, parent, false)

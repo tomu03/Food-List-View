@@ -34,7 +34,7 @@
         android:id="@+id/foodDetalis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Food details"
+        android:text="food_details"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/foodImg"
         app:layout_constraintEnd_toEndOf="@+id/foodName"
