@@ -7,28 +7,30 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.foodlist.R.id.foodImg
+import com.example.foodlist.R.id.foodName
 
 class foodDetailsActivity : AppCompatActivity() {
 
 
-    lateinit var sfoodName: TextView
-    lateinit var sfoodImg: ImageView
-    lateinit var sfoodDes: TextView
+    lateinit var foodName: TextView
+    lateinit var foodImg: ImageView
+    lateinit var foodDes: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_food_details)
 
-        sfoodName = findViewById(R.id.sfoodName)
-        sfoodImg = findViewById(R.id.sfoodImg)
-        sfoodDes = findViewById(R.id.sfoodDes)
+        foodName = findViewById(R.id.foodName)
+        foodImg = findViewById(R.id.foodImg)
+        foodDes = findViewById(R.id.sFoodDetalis)
 
         var name = intent.getStringExtra("name")
         var img = intent.getIntExtra("image", R.drawable.pizza)
         var desc = intent.getStringExtra("longdesc")
 
-        sfoodDes.text = desc
-        sfoodName.text = name
-        sfoodImg.setImageResource(img)
+        foodDes.text = desc
+        foodName.text = name
+        foodImg.setImageResource(img)
     }
 }

@@ -14,7 +14,7 @@ class MyfoodAdapter(
     private val desc: Array<String>,
     private val imageId: Array<Int>
 ) : ArrayAdapter<String>(context,R.layout.listfood, title) {
-    @SuppressLint("ViewHolder")
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val conInFlater = context.layoutInflater
         val rowView = conInFlater.inflate(R.layout.listfood, parent, false)
